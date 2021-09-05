@@ -196,10 +196,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-08-24 22:10:35 / 修改时间：22:59:40" itemprop="dateCreated datePublished" datetime="2021-08-24T22:10:35-07:00">2021-08-24</time>
+              <time title="创建时间：2021-08-24 22:10:35" itemprop="dateCreated datePublished" datetime="2021-08-24T22:10:35-07:00">2021-08-24</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-09-05 16:08:43" itemprop="dateModified" datetime="2021-09-05T16:08:43-07:00">2021-09-05</time>
+              </span>
 
           
 
@@ -219,6 +225,7 @@
 </ul>
 </li>
 </ul>
+<h2 id="sdk-jdk等名词解释"><a href="#sdk-jdk等名词解释" class="headerlink" title="sdk, jdk等名词解释"></a>sdk, jdk等名词解释</h2><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/jilodream/p/4518640.html">here</a></p>
 <h2 id="对于MAC-OS用户来说，如何配置和管理我们的Java版本"><a href="#对于MAC-OS用户来说，如何配置和管理我们的Java版本" class="headerlink" title="对于MAC_OS用户来说，如何配置和管理我们的Java版本"></a>对于MAC_OS用户来说，如何配置和管理我们的Java版本</h2><p>请参考：<a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000020083040">https://segmentfault.com/a/1190000020083040</a><br>这篇文章中，</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># JDK 6、JDK 8、JDK 12 的 export 命令</span><br><span class="line">export JDK6_HOME=&quot;/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home&quot;</span><br><span class="line">export JDK8_HOME=&quot;/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home&quot;</span><br><span class="line">export JDK12_HOME=&quot;/Library/Java/JavaVirtualMachines/openjdk-12.0.1.jdk/Contents/Home&quot;</span><br><span class="line"></span><br><span class="line"># alias 命令链接到 export 命令</span><br><span class="line">alias jdk6=&quot;export JAVA_HOME=$JDK6_HOME&quot;</span><br><span class="line">alias jdk8=&quot;export JAVA_HOME=$JDK8_HOME&quot;</span><br><span class="line">alias jdk12=&quot;export JAVA_HOME=$JDK12_HOME&quot;</span><br></pre></td></tr></table></figure>
 <p>这一部分的内容我在实操的时候发现一直运行不通，最后我发现是因为 Library 前面多了一个 / ，排坑完毕！<br>此时我们就可以用jdk8, jdk16来快速切换我们的JDK了</p>
