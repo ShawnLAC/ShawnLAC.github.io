@@ -27,14 +27,13 @@
 <meta property="og:site_name" content="Shawn">
 <meta property="og:description" content="Java集合漫谈先简单介绍一下 Array 吧 1. Array创建1234567891011121314151617&#x2F;&#x2F; 一维数组int[] a &#x3D; new int[10];int[] b &#x3D; &amp;#123;1, 2, 3&amp;#125;;int[] c &#x3D; new int[]&amp;#123;1, 2, 3&amp;#125;;&#x2F;&#x2F; 二维数组String[][] str &#x3D; new String[3][4];in">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://www.runoob.com/wp-content/uploads/2014/01/2243690-9cd9c896e0d512ed.gif">
 <meta property="og:image" content="http://example.com/images/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6.gif">
 <meta property="og:image" content="http://example.com/images/ArrayList.png">
 <meta property="article:published_time" content="2021-09-14T06:28:16.404Z">
-<meta property="article:modified_time" content="2021-09-14T06:28:16.404Z">
+<meta property="article:modified_time" content="2021-09-14T06:47:55.619Z">
 <meta property="article:author" content="Shawn">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://www.runoob.com/wp-content/uploads/2014/01/2243690-9cd9c896e0d512ed.gif">
+<meta name="twitter:image" content="http://example.com/images/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6.gif">
 
 <link rel="canonical" href="http://example.com/2021/09/13/Java%E9%9B%86%E5%90%88%E6%BC%AB%E8%B0%88/">
 
@@ -202,8 +201,9 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2021-09-13 23:28:16" itemprop="dateCreated datePublished" datetime="2021-09-13T23:28:16-07:00">2021-09-13</time>
+              <time title="创建时间：2021-09-13 23:28:16 / 修改时间：23:47:55" itemprop="dateCreated datePublished" datetime="2021-09-13T23:28:16-07:00">2021-09-13</time>
             </span>
 
           
@@ -224,16 +224,35 @@
 
 
 
-<h2 id="2-Java集合框架"><a href="#2-Java集合框架" class="headerlink" title="2. Java集合框架"></a>2. Java集合框架</h2><p><img src="https://www.runoob.com/wp-content/uploads/2014/01/2243690-9cd9c896e0d512ed.gif" alt="img"></p>
-<p><img src="/images/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6.gif" alt="Java集合框架"></p>
+<h2 id="2-Java集合框架"><a href="#2-Java集合框架" class="headerlink" title="2. Java集合框架"></a>2. Java集合框架</h2><p><img src="/images/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6.gif" alt="Java集合框架"></p>
 <ul>
 <li><a target="_blank" rel="noopener" href="https://www.runoob.com/java/java-collections.html">https://www.runoob.com/java/java-collections.html</a></li>
 </ul>
 <h2 id="3-ArrayList"><a href="#3-ArrayList" class="headerlink" title="3. ArrayList"></a>3. ArrayList</h2><p><img src="/images/ArrayList.png" alt="ArrayList"></p>
 <h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ul>
 <li>没有大小限制</li>
-<li></li>
+<li>在频繁访问的情景下使用，当作链表使用首选</li>
 </ul>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ArrayList</span><br><span class="line">  </span><br><span class="line"><span class="comment">// 创建</span></span><br><span class="line">ArrayList&lt;String&gt; arrayList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 添加元素到末尾 O(1)</span></span><br><span class="line">arrayList.add(<span class="string">&quot;PaoLu&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 访问元素 O(1)</span></span><br><span class="line">arrayList.get(<span class="number">1</span>); <span class="comment">// 访问第二个元素</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 修改元素 O(n)</span></span><br><span class="line">arrayList.set(<span class="number">1</span>, <span class="string">&quot;BuPaoLe&quot;</span>)</span><br><span class="line">  </span><br><span class="line"><span class="comment">// 删除元素 O(n)</span></span><br><span class="line">arrayList.remove(<span class="number">3</span>); <span class="comment">// 删除第四个元素</span></span><br><span class="line">arrayList.clear(); <span class="comment">// 删除所有元素</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 计算大小 O(1)</span></span><br><span class="line">arrayList.size();</span><br><span class="line"></span><br><span class="line"><span class="comment">// for-each 迭代 O(n)</span></span><br><span class="line"><span class="keyword">for</span> (String i : arrayList) &#123;</span><br><span class="line">  System.out.pringln(i);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 排序 O(nlogn)</span></span><br><span class="line"><span class="keyword">import</span> java.util.Collections;</span><br><span class="line">Collections.sort(arrayList); <span class="comment">// 字母排序</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 是否存在 O(n)</span></span><br><span class="line">arrayList.contains(<span class="number">3</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 是否为空</span></span><br><span class="line">arrayList.isEmpty();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 转换</span></span><br><span class="line">arrayList.toArray();</span><br><span class="line">arrayList.toString();</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     </div>
 
@@ -311,7 +330,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java%E9%9B%86%E5%90%88%E6%BC%AB%E8%B0%88"><span class="nav-number">1.</span> <span class="nav-text">Java集合漫谈</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Array"><span class="nav-number">1.1.</span> <span class="nav-text">1. Array</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA"><span class="nav-number">1.1.1.</span> <span class="nav-text">创建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E5%92%8C%E5%87%BD%E6%95%B0"><span class="nav-number">1.1.2.</span> <span class="nav-text">变量和函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6"><span class="nav-number">1.2.</span> <span class="nav-text">2. Java集合框架</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-ArrayList"><span class="nav-number">1.3.</span> <span class="nav-text">3. ArrayList</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%98%E7%82%B9"><span class="nav-number">1.3.1.</span> <span class="nav-text">优点</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java%E9%9B%86%E5%90%88%E6%BC%AB%E8%B0%88"><span class="nav-number">1.</span> <span class="nav-text">Java集合漫谈</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Array"><span class="nav-number">1.1.</span> <span class="nav-text">1. Array</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA"><span class="nav-number">1.1.1.</span> <span class="nav-text">创建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E5%92%8C%E5%87%BD%E6%95%B0"><span class="nav-number">1.1.2.</span> <span class="nav-text">变量和函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6"><span class="nav-number">1.2.</span> <span class="nav-text">2. Java集合框架</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-ArrayList"><span class="nav-number">1.3.</span> <span class="nav-text">3. ArrayList</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%98%E7%82%B9"><span class="nav-number">1.3.1.</span> <span class="nav-text">优点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8"><span class="nav-number">1.3.2.</span> <span class="nav-text">使用</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
