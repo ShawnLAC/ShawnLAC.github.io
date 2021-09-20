@@ -20,30 +20,37 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="A NJUSCer">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Shawn">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="Java集合漫谈先简单介绍一下 Array 吧 1. Array创建1234567891011121314151617&#x2F;&#x2F; 一维数组int[] a &#x3D; new int[10];int[] b &#x3D; &amp;#123;1, 2, 3&amp;#125;;int[] c &#x3D; new int[]&amp;#123;1, 2, 3&amp;#125;;&#x2F;&#x2F; 二维数组String[][] str &#x3D; new String[3][4];in">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java集合漫谈">
+<meta property="og:url" content="http://example.com/2021/09/17/Java%E9%9B%86%E5%90%88%E6%BC%AB%E8%B0%88/index.html">
 <meta property="og:site_name" content="Shawn">
-<meta property="og:description" content="A NJUSCer">
+<meta property="og:description" content="Java集合漫谈先简单介绍一下 Array 吧 1. Array创建1234567891011121314151617&#x2F;&#x2F; 一维数组int[] a &#x3D; new int[10];int[] b &#x3D; &amp;#123;1, 2, 3&amp;#125;;int[] c &#x3D; new int[]&amp;#123;1, 2, 3&amp;#125;;&#x2F;&#x2F; 二维数组String[][] str &#x3D; new String[3][4];in">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/images/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6.gif">
+<meta property="og:image" content="http://example.com/images/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B62.jpeg">
+<meta property="og:image" content="http://example.com/images/ArrayList.png">
+<meta property="article:published_time" content="2021-09-18T04:56:21.000Z">
+<meta property="article:modified_time" content="2021-09-20T02:02:47.429Z">
 <meta property="article:author" content="Shawn">
+<meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6.gif">
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2021/09/17/Java%E9%9B%86%E5%90%88%E6%BC%AB%E8%B0%88/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>Shawn</title>
+  <title>Java集合漫谈 | Shawn</title>
   
 
 
@@ -167,9 +174,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -185,10 +193,9 @@
       <meta itemprop="name" content="Shawn">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/17/Java%E9%9B%86%E5%90%88%E6%BC%AB%E8%B0%88/" class="post-title-link" itemprop="url">Java集合漫谈</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          Java集合漫谈
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -218,7 +225,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="Java集合漫谈"><a href="#Java集合漫谈" class="headerlink" title="Java集合漫谈"></a>Java集合漫谈</h1><p>先简单介绍一下 Array 吧</p>
+        <h1 id="Java集合漫谈"><a href="#Java集合漫谈" class="headerlink" title="Java集合漫谈"></a>Java集合漫谈</h1><p>先简单介绍一下 Array 吧</p>
 <h2 id="1-Array"><a href="#1-Array" class="headerlink" title="1. Array"></a>1. Array</h2><h3 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 一维数组</span></span><br><span class="line"><span class="keyword">int</span>[] a = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">10</span>];</span><br><span class="line"><span class="keyword">int</span>[] b = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;;</span><br><span class="line"><span class="keyword">int</span>[] c = <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 二维数组</span></span><br><span class="line">String[][] str = <span class="keyword">new</span> String[<span class="number">3</span>][<span class="number">4</span>];</span><br><span class="line"><span class="keyword">int</span>[][] temp = &#123;&#123;<span class="number">1</span>, <span class="number">2</span>&#125;, &#123;<span class="number">3</span>, <span class="number">4</span>&#125;&#125;;</span><br><span class="line"><span class="keyword">int</span>[][] temp = <span class="keyword">new</span> <span class="keyword">int</span>[][]&#123;</span><br><span class="line">  &#123;<span class="number">1</span>, <span class="number">2</span>&#125;, &#123;<span class="number">3</span>, <span class="number">4</span>&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 默认值</span></span><br><span class="line"><span class="comment">// int: 0</span></span><br><span class="line"><span class="comment">// boolean: false</span></span><br><span class="line"><span class="comment">// Object: null</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <h3 id="变量和函数"><a href="#变量和函数" class="headerlink" title="变量和函数"></a>变量和函数</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 取长度</span></span><br><span class="line"><span class="keyword">int</span> len = a.lenth;</span><br><span class="line"></span><br><span class="line"><span class="comment">// For-Each 循环</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> element : a) &#123;</span><br><span class="line">  System.out.println(element);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 排序</span></span><br><span class="line">Arrays.sort(a);</span><br><span class="line"><span class="comment">// 原地算法，空间为 O(1)</span></span><br><span class="line"><span class="comment">// 时间：O(nlogn)</span></span><br><span class="line"><span class="comment">// 可以传入一个 Comparator, lambda表达式</span></span><br><span class="line">Arrays.sort(a, <span class="number">2</span>, <span class="number">7</span>); <span class="comment">// 将数组的第二个到第六个元素排序</span></span><br><span class="line"><span class="comment">// 降序</span></span><br><span class="line">Arrays.sort(a, Collections.reverseOrder());</span><br><span class="line"><span class="comment">// 重写比较器</span></span><br><span class="line">Arrays.sort(boxTypes,<span class="keyword">new</span> Comparator&lt;<span class="keyword">int</span>[]&gt;()&#123;</span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(<span class="keyword">int</span>[] a,<span class="keyword">int</span>[] b)</span></span>&#123;</span><br><span class="line">                <span class="keyword">return</span> b[<span class="number">1</span>] - a[<span class="number">1</span>];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 填充数组</span></span><br><span class="line">Arrays.fill(a, <span class="number">5</span>);</span><br><span class="line">Arrays.fill(a, <span class="number">2</span>, <span class="number">4</span>, <span class="number">8</span>); <span class="comment">// 将array的第二个和第三个元素赋值为8</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 比较</span></span><br><span class="line">Arrays.equals(a, b);</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
@@ -315,572 +322,33 @@
 <li>不建议使用</li>
 </ul>
 <h2 id="12-Queue（接口）"><a href="#12-Queue（接口）" class="headerlink" title="12. Queue（接口）"></a>12. Queue（接口）</h2><h2 id="13-PriorityQueue"><a href="#13-PriorityQueue" class="headerlink" title="13. PriorityQueue"></a>13. PriorityQueue</h2>
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+          <div class="post-tags">
+              <a href="/tags/Java/" rel="tag"># Java</a>
+          </div>
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/07/%E7%AE%80%E6%9E%90Java%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/">
+        
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/a.pngf">
-      <meta itemprop="name" content="Shawn">
-      <meta itemprop="description" content="A NJUSCer">
-    </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Shawn">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/07/%E7%AE%80%E6%9E%90Java%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/" class="post-title-link" itemprop="url">未命名</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-09-07 22:48:27 / 修改时间：22:58:49" itemprop="dateCreated datePublished" datetime="2021-09-07T22:48:27-07:00">2021-09-07</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Scanner in = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">in.nextInt(); <span class="comment">// 读取一行并获取整数</span></span><br><span class="line">in.nextDouble();</span><br><span class="line">in.next();</span><br><span class="line">in.nextLine(); <span class="comment">// 读取一行并获取字符串</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>Scanner 的官方文档: <a target="_blank" rel="noopener" href="https://docs.oracle.com/javase/8/docs/api/java/util/Scanner.html">https://docs.oracle.com/javase/8/docs/api/java/util/Scanner.html</a></li>
-</ul>
-<h1 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">System.out.println();</span><br><span class="line">System.out.print();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 格式化输出</span></span><br><span class="line"><span class="keyword">double</span> d = <span class="number">3.1415926</span>;</span><br><span class="line">System.out.printf(<span class="string">&quot;%.2f\n&quot;</span>, d); <span class="comment">// 显示两位小数3.14</span></span><br><span class="line">System.out.printf(<span class="string">&quot;%.4f\n&quot;</span>, d); <span class="comment">// 显示4位小数3.1416</span></span><br></pre></td></tr></table></figure>
-
-<table>
-<thead>
-<tr>
-<th align="left">占位符</th>
-<th align="left">说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">%d</td>
-<td align="left">格式化输出整数</td>
-</tr>
-<tr>
-<td align="left">%x</td>
-<td align="left">格式化输出十六进制整数</td>
-</tr>
-<tr>
-<td align="left">%f</td>
-<td align="left">格式化输出浮点数</td>
-</tr>
-<tr>
-<td align="left">%e</td>
-<td align="left">格式化输出科学计数法表示的浮点数</td>
-</tr>
-<tr>
-<td align="left">%s</td>
-<td align="left">格式化字符串</td>
-</tr>
-</tbody></table>
-<ul>
-<li><p>注意，由于%表示占位符，因此，连续两个%%表示一个%字符本身。</p>
-</li>
-<li><p>详细请参阅官方文档：<a target="_blank" rel="noopener" href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Formatter.html#syntax">https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Formatter.html#syntax</a></p>
-</li>
-</ul>
-
-      
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/09/07/%E7%AE%80%E6%9E%90Java%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/" rel="prev" title="">
+      <i class="fa fa-chevron-left"></i> 
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/07/%E6%B5%85%E8%B0%88Java%E4%B8%AD%E7%9A%84String/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/a.pngf">
-      <meta itemprop="name" content="Shawn">
-      <meta itemprop="description" content="A NJUSCer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Shawn">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/07/%E6%B5%85%E8%B0%88Java%E4%B8%AD%E7%9A%84String/" class="post-title-link" itemprop="url">浅谈Java中的String</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-09-07 18:41:52 / 修改时间：22:30:40" itemprop="dateCreated datePublished" datetime="2021-09-07T18:41:52-07:00">2021-09-07</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="String-的基本介绍"><a href="#String-的基本介绍" class="headerlink" title="String 的基本介绍"></a>String 的基本介绍</h1><ul>
-<li>String 是 Java 中的对象</li>
-<li>String 是不可改变的，不同于 StringBuilder 和 StringBuffer</li>
-</ul>
-<h1 id="String-的底层原理"><a href="#String-的底层原理" class="headerlink" title="String 的底层原理"></a>String 的底层原理</h1><p>关于底层原理，请阅读以下文章：</p>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000009888357">https://segmentfault.com/a/1190000009888357</a> <strong>字符串的存储</strong></li>
-<li><a target="_blank" rel="noopener" href="https://www.runoob.com/java/java-string-intern.html">https://www.runoob.com/java/java-string-intern.html</a> <strong>s.intern()介绍</strong></li>
-</ul>
-<h1 id="String-的高频用法"><a href="#String-的高频用法" class="headerlink" title="String 的高频用法"></a>String 的高频用法</h1><h2 id="1-创建"><a href="#1-创建" class="headerlink" title="1. 创建"></a>1. 创建</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// String 的创建</span></span><br><span class="line"><span class="comment">// 1.构造函数</span></span><br><span class="line">String str1 = <span class="keyword">new</span> String(<span class="string">&quot;yyds&quot;</span>);</span><br><span class="line">String str2 = <span class="keyword">new</span> String(<span class="string">&quot;yyds&quot;</span>);</span><br><span class="line"><span class="comment">// 2.String 直接创建</span></span><br><span class="line">String s1 = <span class="string">&quot;dddd&quot;</span>;</span><br><span class="line">String s2 = <span class="string">&quot;dddd&quot;</span>;</span><br></pre></td></tr></table></figure>
-
-<p>那么，这两种创建方式有什么区别呢？</p>
-<ul>
-<li>对于 str，字符串对象存储在堆上，str1 和 str2 指向的不是同一片地址</li>
-<li>对于 s1，字符串存储在公共池中，s1 和 s2 指向的是同一块地址</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 3.字符数组</span></span><br><span class="line"><span class="keyword">char</span>[] helloArray = &#123;<span class="string">&#x27;y&#x27;</span>, <span class="string">&#x27;y&#x27;</span>, <span class="string">&#x27;d&#x27;</span>, <span class="string">&#x27;s&#x27;</span>&#125;;</span><br><span class="line">String helloString = <span class="keyword">new</span> String(helloArray);</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-拼接"><a href="#2-拼接" class="headerlink" title="2. 拼接"></a>2. 拼接</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 字符串拼接</span></span><br><span class="line"><span class="comment">// 1.concat函数</span></span><br><span class="line"><span class="string">&quot;yyds, &quot;</span>.concat(<span class="string">&quot;dddd&quot;</span>)</span><br><span class="line"><span class="comment">// 2. +</span></span><br><span class="line"><span class="string">&quot;yyds&quot;</span> + <span class="string">&quot;dddd&quot;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="创建格式化字符串"><a href="#创建格式化字符串" class="headerlink" title="创建格式化字符串"></a>创建格式化字符串</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">System.out.printf(<span class="string">&quot;浮点型变量的值为 &quot;</span> +</span><br><span class="line">                  <span class="string">&quot;%f, 整型变量的值为 &quot;</span> +</span><br><span class="line">                  <span class="string">&quot; %d, 字符串变量的值为 &quot;</span> +</span><br><span class="line">                  <span class="string">&quot;is %s&quot;</span>, floatVar, intVar, stringVar);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 另一种写法</span></span><br><span class="line">String fs;</span><br><span class="line">fs = String.format(<span class="string">&quot;浮点型变量的值为 &quot;</span> +</span><br><span class="line">                   <span class="string">&quot;%f, 整型变量的值为 &quot;</span> +</span><br><span class="line">                   <span class="string">&quot; %d, 字符串变量的值为 &quot;</span> +</span><br><span class="line">                   <span class="string">&quot; %s&quot;</span>, floatVar, intVar, stringVar);</span><br></pre></td></tr></table></figure>
-
-<h2 id="4-其他方法"><a href="#4-其他方法" class="headerlink" title="4. 其他方法"></a>4. 其他方法</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 比较</span></span><br><span class="line"><span class="comment">// 比较是不是相等</span></span><br><span class="line">String a = <span class="string">&quot;a&quot;</span>;</span><br><span class="line">String b = <span class="string">&quot;b&quot;</span>;</span><br><span class="line">a == b 比较地址</span><br><span class="line">a.equals(b) 比较具体的值</span><br><span class="line"></span><br><span class="line"><span class="comment">// 不考虑大小写</span></span><br><span class="line">a.equalsignoreCase(b)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 按照字典序比较</span></span><br><span class="line">a.compareTo(b)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 和 StringBuffer 比较</span></span><br><span class="line">a.contentEquals(s)</span><br><span class="line"></span><br><span class="line">----------------------------------------  </span><br><span class="line"></span><br><span class="line"><span class="comment">// 取长度</span></span><br><span class="line"><span class="keyword">int</span> len = a.length();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 取索引为 i 的字符</span></span><br><span class="line"><span class="keyword">char</span> c = a.charAt(i);</span><br><span class="line"></span><br><span class="line"><span class="comment">// null 不是空串</span></span><br><span class="line">a.isEmpty()</span><br><span class="line"><span class="comment">// 等价于</span></span><br><span class="line">a == <span class="keyword">null</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 包含子串</span></span><br><span class="line">a.contains(b)</span><br><span class="line">  </span><br><span class="line"><span class="comment">// 替换</span></span><br><span class="line">String re = a.replace(<span class="string">&quot;a&quot;</span>, <span class="string">&quot;g&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 去除左右空格</span></span><br><span class="line">String trim = a.trim();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 转换为字符数组</span></span><br><span class="line">String charArray = a.toCharArray();</span><br><span class="line">String upperCase = a.toUpperCase();</span><br><span class="line">String lowerCase = a.toLowerCase();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 判断是不是具体的字符类型</span></span><br><span class="line">Character.isDigit(a.charAt(i))</span><br><span class="line">Character.isLetter(a.charAt(i))</span><br><span class="line">Character.isLetterOrDigit(a.charAt(i))</span><br><span class="line">  </span><br><span class="line"><span class="comment">// 计算字符大小</span></span><br><span class="line">s.charAt(i) - <span class="string">&#x27;0&#x27;</span></span><br><span class="line">  </span><br><span class="line"><span class="comment">// 转换为大小写</span></span><br><span class="line">Character.toUpperCase()</span><br><span class="line">Character.toLowerCase()</span><br><span class="line">  </span><br><span class="line"><span class="comment">// 判断字符串是否以 suffix 结束</span></span><br><span class="line">a.endWith(<span class="string">&quot;a&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 返回哈希码</span></span><br><span class="line">a.hashCode()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 返回子串</span></span><br><span class="line">a.subString(i) <span class="comment">// i: int [i, a.length())</span></span><br><span class="line">a.subString(i, j) <span class="comment">// i: int, j: int [i, j)</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="StringBuilder-和-StringBuffer"><a href="#StringBuilder-和-StringBuffer" class="headerlink" title="StringBuilder 和 StringBuffer"></a>StringBuilder 和 StringBuffer</h2><h3 id="1-用法"><a href="#1-用法" class="headerlink" title="1. 用法"></a>1. 用法</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建</span></span><br><span class="line">StringBuffer s = <span class="keyword">new</span> StringBuffer();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 添加字符</span></span><br><span class="line">s.append(<span class="string">&#x27;f&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//删除某一个索引的字符</span></span><br><span class="line">s.deleteCharAt(i);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 转换为 String</span></span><br><span class="line">s.toString()</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="2-两者的区别"><a href="#2-两者的区别" class="headerlink" title="2. 两者的区别"></a>2. 两者的区别</h3><p>StringBuffer 是线程安全的，StringBuilder 不是</p>
-<p>但是，在单线程中，StringBuffer 的性能不如 Stringbuilder</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/08/24/Java%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E6%8C%87%E5%8D%97/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/a.pngf">
-      <meta itemprop="name" content="Shawn">
-      <meta itemprop="description" content="A NJUSCer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Shawn">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/08/24/Java%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E6%8C%87%E5%8D%97/" class="post-title-link" itemprop="url">Java版本控制指南</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-08-24 22:10:35" itemprop="dateCreated datePublished" datetime="2021-08-24T22:10:35-07:00">2021-08-24</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-09-05 16:08:43" itemprop="dateModified" datetime="2021-09-05T16:08:43-07:00">2021-09-05</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="Java版本"><a href="#Java版本" class="headerlink" title="Java版本"></a>Java版本</h1><h2 id="OpenJDK-v-s-OracleJDK"><a href="#OpenJDK-v-s-OracleJDK" class="headerlink" title="OpenJDK v.s. OracleJDK"></a>OpenJDK v.s. OracleJDK</h2><p>关于Java的版本，目前已经更新到1.16了，Java的版本很多，其中有OpenJDK和OracleJDK两大类，这两者有什么区别呢？</p>
-<ul>
-<li>参见以下文章：<ul>
-<li>在使用上OracleJDK和OpenJDK有什么区别？ - 码农面试资料君的回答 - 知乎<br><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/327162941/answer/2017291203">https://www.zhihu.com/question/327162941/answer/2017291203</a></li>
-</ul>
-</li>
-</ul>
-<h2 id="sdk-jdk等名词解释"><a href="#sdk-jdk等名词解释" class="headerlink" title="sdk, jdk等名词解释"></a>sdk, jdk等名词解释</h2><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/jilodream/p/4518640.html">here</a></p>
-<h2 id="对于MAC-OS用户来说，如何配置和管理我们的Java版本"><a href="#对于MAC-OS用户来说，如何配置和管理我们的Java版本" class="headerlink" title="对于MAC_OS用户来说，如何配置和管理我们的Java版本"></a>对于MAC_OS用户来说，如何配置和管理我们的Java版本</h2><p>请参考：<a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000020083040">https://segmentfault.com/a/1190000020083040</a><br>这篇文章中，</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># JDK 6、JDK 8、JDK 12 的 export 命令</span><br><span class="line">export JDK6_HOME=&quot;/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home&quot;</span><br><span class="line">export JDK8_HOME=&quot;/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home&quot;</span><br><span class="line">export JDK12_HOME=&quot;/Library/Java/JavaVirtualMachines/openjdk-12.0.1.jdk/Contents/Home&quot;</span><br><span class="line"></span><br><span class="line"># alias 命令链接到 export 命令</span><br><span class="line">alias jdk6=&quot;export JAVA_HOME=$JDK6_HOME&quot;</span><br><span class="line">alias jdk8=&quot;export JAVA_HOME=$JDK8_HOME&quot;</span><br><span class="line">alias jdk12=&quot;export JAVA_HOME=$JDK12_HOME&quot;</span><br></pre></td></tr></table></figure>
-<p>这一部分的内容我在实操的时候发现一直运行不通，最后我发现是因为 Library 前面多了一个 / ，排坑完毕！<br>此时我们就可以用jdk8, jdk16来快速切换我们的JDK了</p>
-<p>中间遇到了点小问题<br>解决：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/03bcc3e2930e">https://www.jianshu.com/p/03bcc3e2930e</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/08/20/%E5%8C%97%E7%BE%8E%E4%BA%92%E8%81%94%E7%BD%91-%E7%A7%91%E6%8A%80%E5%85%AC%E5%8F%B8%E8%B5%84%E6%96%99%E6%95%B4%E7%90%86/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/a.pngf">
-      <meta itemprop="name" content="Shawn">
-      <meta itemprop="description" content="A NJUSCer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Shawn">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/08/20/%E5%8C%97%E7%BE%8E%E4%BA%92%E8%81%94%E7%BD%91-%E7%A7%91%E6%8A%80%E5%85%AC%E5%8F%B8%E8%B5%84%E6%96%99%E6%95%B4%E7%90%86/" class="post-title-link" itemprop="url">北美互联网/科技公司资料整理</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-08-20 20:38:07" itemprop="dateCreated datePublished" datetime="2021-08-20T20:38:07-07:00">2021-08-20</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-08-22 23:04:59" itemprop="dateModified" datetime="2021-08-22T23:04:59-07:00">2021-08-22</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="Amazon"><a href="#Amazon" class="headerlink" title="Amazon"></a>Amazon</h1><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><ul>
-<li>亚马逊是一家总部位于美国西雅图的跨国电子商务企业，目前是全球最大的互联网线上零售商之一。</li>
-<li>Oncall</li>
-<li></li>
-</ul>
-<h2 id="部门"><a href="#部门" class="headerlink" title="部门"></a>部门</h2><h3 id="湾区-AWS-dp"><a href="#湾区-AWS-dp" class="headerlink" title="湾区-AWS dp"></a>湾区-AWS dp</h3><ul>
-<li>WLB 很差 55h/week</li>
-</ul>
-<h3 id="AWS-dp"><a href="#AWS-dp" class="headerlink" title="AWS dp"></a>AWS dp</h3><ul>
-<li>早点了解公司内的组，拿transfer</li>
-<li>推荐的AWS的组：S3, EC2, DDB</li>
-</ul>
-<p>总结：</p>
-<ul>
-<li>选组非常重要！</li>
-<li>亚麻不是特别适合new grad</li>
-</ul>
-<h1 id="Bloomberg"><a href="#Bloomberg" class="headerlink" title="Bloomberg"></a>Bloomberg</h1><h2 id="介绍-1"><a href="#介绍-1" class="headerlink" title="介绍"></a>介绍</h2><ul>
-<li>成立于1981年的美国彭博资讯公司是目前全球最大的财经资讯公司。彭博仅用了22年的时间，就将它的金融数据市场的销售收入超越了具有150年历史的、世界上最大的资讯公司——路透集团。</li>
-<li>位置：美国纽约</li>
-<li>开花堡</li>
-</ul>
-<h2 id="面经"><a href="#面经" class="headerlink" title="面经"></a>面经</h2><h3 id="LC"><a href="#LC" class="headerlink" title="LC:"></a>LC:</h3><ul>
-<li>445 add two numbers II</li>
-<li>236 Lowest Common Ancestor of a Binary Tree</li>
-<li>add two number</li>
-<li>binary tree vertical travesal</li>
-<li>meeting room 2</li>
-<li>underground system design</li>
-<li>138</li>
-<li>140</li>
-<li>200</li>
-<li>找零钱变形</li>
-<li>LRU cache</li>
-</ul>
-<h3 id="技术："><a href="#技术：" class="headerlink" title="技术："></a>技术：</h3><ul>
-<li>Docker</li>
-<li>restful</li>
-<li>database (SQL 和 NoSQL的区别)</li>
-</ul>
-<h1 id="Uber"><a href="#Uber" class="headerlink" title="Uber"></a>Uber</h1><h2 id="介绍-2"><a href="#介绍-2" class="headerlink" title="介绍"></a>介绍</h2><h3 id="地里的精华文章："><a href="#地里的精华文章：" class="headerlink" title="地里的精华文章："></a>地里的精华文章：</h3><ul>
-<li><a target="_blank" rel="noopener" href="https://www.1point3acres.com/bbs/thread-426327-1-1.html">https://www.1point3acres.com/bbs/thread-426327-1-1.html</a></li>
-<li>比较好的大组：UberEats, feight</li>
-<li>ATG: 自动驾驶，Map: 地图，driver：管理司机，infra: 基础架构</li>
-</ul>
-<h2 id="面经-1"><a href="#面经-1" class="headerlink" title="面经"></a>面经</h2><p>平台：codesignal，需要打开摄像头+共享屏幕，但是不用交流，类似于有一个面试官在监考</p>
-<h3 id="OA"><a href="#OA" class="headerlink" title="OA"></a>OA</h3><ul>
-<li>dp: 70分钟 每道题有30个test case，根据通过的test case来计算总分 725-775需要电话面试 &gt;775可以直接onsite<br>第一题非常简单，第二题大概是easy，后面两个是medium，越后面的比例越大<br>先20分钟搞定前面两题 只要通过测试样例就可以了 不用太optimaized</li>
-</ul>
-<h3 id="phone-interview"><a href="#phone-interview" class="headerlink" title="phone interview"></a>phone interview</h3><h3 id="onsite"><a href="#onsite" class="headerlink" title="onsite"></a>onsite</h3><ul>
-<li>dp: 五轮：coding + system design + HM(hire manager) + problem solving(coding) + bar raiser(coding)</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/08/19/START-MY-USC-STUDY-JOURNEY/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/a.pngf">
-      <meta itemprop="name" content="Shawn">
-      <meta itemprop="description" content="A NJUSCer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Shawn">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/08/19/START-MY-USC-STUDY-JOURNEY/" class="post-title-link" itemprop="url">START MY USC STUDY JOURNEY</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-08-19 22:51:27 / 修改时间：23:49:45" itemprop="dateCreated datePublished" datetime="2021-08-19T22:51:27-07:00">2021-08-19</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="USC-I’m-coming"><a href="#USC-I’m-coming" class="headerlink" title="USC I’m coming!"></a>USC I’m coming!</h1><h2 id="大连-首尔-洛杉矶"><a href="#大连-首尔-洛杉矶" class="headerlink" title="大连-首尔-洛杉矶"></a>大连-首尔-洛杉矶</h2><p>这一天是2021年8月6日，美国新增人数为：168351。这个数字背后，承载了一个个留学生家庭心中的忐忑，但同时，也正是这样的大环境，让我的这次留学之旅显得更加珍贵，想想古代的历朝历代，战争和草菅人命的世道往往是主旋律，想想近代的救亡图存，离不开人民在枪林弹雨中奔涌的热忱。嗯，时代变了，但也没什么不一样的。以积极的心态面对时代抛出的难题，才有可能迎刃而解。</p>
-<p>尼采说：“Those who were seen dancing were thought to insane by those who could not hear the music.” 没有事实，只有诠释。不忘初心，有所收获。</p>
-<p>入境插曲：被关小黑屋2.5小时，问题不大，但是考验心态 :(</p>
-<h2 id="PPV"><a href="#PPV" class="headerlink" title="PPV"></a>PPV</h2><p>受到新冠疫情的影响，今年的PPV可以线上进行。<br>这个需要在入境美国后尽快完成，以消除会限制选课的STU50的hold。</p>
-<h2 id="TB-test"><a href="#TB-test" class="headerlink" title="TB-test"></a>TB-test</h2><p>TB检测必须在美国境内进行，我是在Lyon Center抽血检测的，推荐预约在清晨，排队的人少。</p>
-<h2 id="Covid-19检测"><a href="#Covid-19检测" class="headerlink" title="Covid-19检测"></a>Covid-19检测</h2><p>落地LA之后3天内需要检测一次，而后是7天一次。</p>
-<h2 id="公寓"><a href="#公寓" class="headerlink" title="公寓"></a>公寓</h2><p>入住的具体位置是，来了之后需要去洛杉矶能源中心注册一下电费的账户。对公寓还是很满意的，很干净整洁，位置也比较安全。</p>
-<h2 id="选课"><a href="#选课" class="headerlink" title="选课"></a>选课</h2><p>选课是要狠狠恨斗两句的，USC的人实在太多了，很多课申请DC的人数都排出去几间教室，本着不想水的想法，希望最后不要只剩下预留的CSCI585了。。</p>
-<h2 id="shopping"><a href="#shopping" class="headerlink" title="shopping"></a>shopping</h2><p>目前比较推荐的：</p>
-<ul>
-<li>杂货、果汁、蔬菜：Raphs(in-person)</li>
-<li>肉、菜、蛋、酒：Trader Joes(in-person)</li>
-<li>日用品：Target(shipping or in-person)</li>
-<li>电子产品、日用品：Amazon(shipping 但是送货时间很不规律)</li>
-<li>食材：weee!(shipping 平均两天送达)</li>
-<li>华人商品：99 Ranches Market（in-person)</li>
-</ul>
-<h2 id="新冠"><a href="#新冠" class="headerlink" title="新冠"></a>新冠</h2><p>美国人的防疫意识很差，自己做好防护吧！<br>贴几个有用的网站：</p>
-<ul>
-<li>学校记录新增人数的：<a target="_blank" rel="noopener" href="https://coronavirus.usc.edu/dashboard/">https://coronavirus.usc.edu/dashboard/</a></li>
-<li>To be continued…</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/08/17/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/a.pngf">
-      <meta itemprop="name" content="Shawn">
-      <meta itemprop="description" content="A NJUSCer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Shawn">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/08/17/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" class="post-title-link" itemprop="url">我的第一篇博客文章</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-08-17 21:56:21" itemprop="dateCreated datePublished" datetime="2021-08-17T21:56:21-07:00">2021-08-17</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-09-07 19:04:55" itemprop="dateModified" datetime="2021-09-07T19:04:55-07:00">2021-09-07</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="Hexo安装小白教程"><a href="#Hexo安装小白教程" class="headerlink" title="Hexo安装小白教程"></a>Hexo安装小白教程</h1><ul>
-<li>link：<br><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Yb411a7ty?from=search&amp;seid=10067804130876709922">https://www.bilibili.com/video/BV1Yb411a7ty?from=search&amp;seid=10067804130876709922</a></li>
-</ul>
-<p><strong>感谢CodeSheep!</strong></p>
-<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><blockquote>
-<p>node -v    查看node版本<br>npm -v 查看npm版本<br>npm install -g cnpm –registry=<a target="_blank" rel="noopener" href="http://registry.npm.taobao.org/">http://registry.npm.taobao.org</a> 安装淘宝的cnpm 管理器<br>cnpm -v    查看cnpm版本<br>cnpm install -g hexo-cli 安装hexo框架<br>hexo -v    查看hexo版本</p>
-</blockquote>
-<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><blockquote>
-<p>mkdir blog 创建blog目录<br>cd blog    进入blog目录<br>sudo hexo init 生成博客 初始化博客<br>hexo s 启动本地博客服务<br><a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a> 本地访问地址<br>hexo n 我的第一篇文章 创建新的文章<br>返回blog目录<br>hexo clean 清理<br>hexo g 生成<br>Github创建一个新的仓库 YourGithubName.github.io<br>cnpm install –save hexo-deployer-git 在blog目录下安装git部署插件</p>
-</blockquote>
-<h2 id="配置-config-yml"><a href="#配置-config-yml" class="headerlink" title="配置_config.yml"></a>配置_config.yml</h2><pre><code># Deployment
-## Docs: https://hexo.io/docs/deployment.html
-deploy:
-      type: git
-     repo: https://github.com/YourGithubName/YourGithubName.github.io.git
-      branch: master
-</code></pre>
-<blockquote>
-<p>hexo d    部署到Github仓库里</p>
-</blockquote>
-<blockquote>
-<p>git clone <a target="_blank" rel="noopener" href="https://github.com/litten/hexo-theme-yilia.git">https://github.com/litten/hexo-theme-yilia.git</a> themes/next</p>
-</blockquote>
-<h2 id="修改hexo根目录下的-config-yml-文件-：-theme-next"><a href="#修改hexo根目录下的-config-yml-文件-：-theme-next" class="headerlink" title="修改hexo根目录下的 _config.yml 文件 ： theme: next"></a>修改hexo根目录下的 _config.yml 文件 ： theme: next</h2><p>hexo c    清理缓存<br>hexo g    生成<br>hexo d    部署到远程Github仓库</p>
-<h2 id="关于图片如何插入"><a href="#关于图片如何插入" class="headerlink" title="关于图片如何插入"></a>关于图片如何插入</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://www.dazhuanlan.com/liumeifly/topics/950653">https://www.dazhuanlan.com/liumeifly/topics/950653</a></li>
-</ul>
-<h2 id="插件总结"><a href="#插件总结" class="headerlink" title="插件总结"></a>插件总结</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://anclark.github.io/2019/03/28/Hexo/%E6%8E%A8%E8%8D%90%E6%8F%92%E4%BB%B6%E6%95%B4%E7%90%86/">https://anclark.github.io/2019/03/28/Hexo/%E6%8E%A8%E8%8D%90%E6%8F%92%E4%BB%B6%E6%95%B4%E7%90%86/</a></li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
   
 
 
@@ -933,6 +401,7 @@ deploy:
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java%E9%9B%86%E5%90%88%E6%BC%AB%E8%B0%88"><span class="nav-number">1.</span> <span class="nav-text">Java集合漫谈</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Array"><span class="nav-number">1.1.</span> <span class="nav-text">1. Array</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA"><span class="nav-number">1.1.1.</span> <span class="nav-text">创建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E5%92%8C%E5%87%BD%E6%95%B0"><span class="nav-number">1.1.2.</span> <span class="nav-text">变量和函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6"><span class="nav-number">1.2.</span> <span class="nav-text">2. Java集合框架</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-ArrayList"><span class="nav-number">1.3.</span> <span class="nav-text">3. ArrayList</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%98%E7%82%B9"><span class="nav-number">1.3.1.</span> <span class="nav-text">优点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8"><span class="nav-number">1.3.2.</span> <span class="nav-text">使用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-LinkedList"><span class="nav-number">1.4.</span> <span class="nav-text">4. LinkedList</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-1"><span class="nav-number">1.4.1.</span> <span class="nav-text">使用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-HashMap"><span class="nav-number">1.5.</span> <span class="nav-text">5. HashMap</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%B9%E7%82%B9"><span class="nav-number">1.5.1.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B"><span class="nav-number">1.5.2.</span> <span class="nav-text">存储过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-2"><span class="nav-number">1.5.3.</span> <span class="nav-text">使用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-TreeMap"><span class="nav-number">1.6.</span> <span class="nav-text">6. TreeMap</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-HashSet"><span class="nav-number">1.7.</span> <span class="nav-text">7. HashSet</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%B9%E7%82%B9-1"><span class="nav-number">1.7.1.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B-1"><span class="nav-number">1.7.2.</span> <span class="nav-text">存储过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-3"><span class="nav-number">1.7.3.</span> <span class="nav-text">使用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-TreeSet"><span class="nav-number">1.8.</span> <span class="nav-text">8. TreeSet</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%B9%E7%82%B9-2"><span class="nav-number">1.8.1.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-4"><span class="nav-number">1.8.2.</span> <span class="nav-text">使用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-Stack"><span class="nav-number">1.9.</span> <span class="nav-text">9. Stack</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-ArrayDeque"><span class="nav-number">1.10.</span> <span class="nav-text">10. ArrayDeque</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-Vector"><span class="nav-number">1.11.</span> <span class="nav-text">11. Vector</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12-Queue%EF%BC%88%E6%8E%A5%E5%8F%A3%EF%BC%89"><span class="nav-number">1.12.</span> <span class="nav-text">12. Queue（接口）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#13-PriorityQueue"><span class="nav-number">1.13.</span> <span class="nav-text">13. PriorityQueue</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
