@@ -173,6 +173,276 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/08/%E7%AE%80%E6%9E%90Java%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/a.pngf">
+      <meta itemprop="name" content="Shawn">
+      <meta itemprop="description" content="A NJUSCer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Shawn">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/10/08/%E7%AE%80%E6%9E%90Java%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/" class="post-title-link" itemprop="url">如何提高Java程序的稳定性</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-10-08 21:56:21 / 修改时间：16:43:32" itemprop="dateCreated datePublished" datetime="2021-10-08T21:56:21-07:00">2021-10-08</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Scanner in = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">in.nextInt(); <span class="comment">// 读取一行并获取整数</span></span><br><span class="line">in.nextDouble();</span><br><span class="line">in.next();</span><br><span class="line">in.nextLine(); <span class="comment">// 读取一行并获取字符串</span></span><br><span class="line">in.hasNext(); <span class="comment">// 判断有没有下一个元素</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Scanner 的官方文档: <a target="_blank" rel="noopener" href="https://docs.oracle.com/javase/8/docs/api/java/util/Scanner.html">https://docs.oracle.com/javase/8/docs/api/java/util/Scanner.html</a></li>
+</ul>
+<h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">System.out.println();</span><br><span class="line">System.out.print();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 格式化输出</span></span><br><span class="line"><span class="keyword">double</span> d = <span class="number">3.1415926</span>;</span><br><span class="line">System.out.printf(<span class="string">&quot;%.2f\n&quot;</span>, d); <span class="comment">// 显示两位小数3.14</span></span><br><span class="line">System.out.printf(<span class="string">&quot;%.4f\n&quot;</span>, d); <span class="comment">// 显示4位小数3.1416</span></span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">占位符</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">%d</td>
+<td align="left">格式化输出整数</td>
+</tr>
+<tr>
+<td align="left">%x</td>
+<td align="left">格式化输出十六进制整数</td>
+</tr>
+<tr>
+<td align="left">%f</td>
+<td align="left">格式化输出浮点数</td>
+</tr>
+<tr>
+<td align="left">%e</td>
+<td align="left">格式化输出科学计数法表示的浮点数</td>
+</tr>
+<tr>
+<td align="left">%s</td>
+<td align="left">格式化字符串</td>
+</tr>
+</tbody></table>
+<ul>
+<li><p>注意，由于%表示占位符，因此，连续两个%%表示一个%字符本身。</p>
+</li>
+<li><p>详细请参阅官方文档：<a target="_blank" rel="noopener" href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Formatter.html#syntax">https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Formatter.html#syntax</a></p>
+</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/08/%E8%A5%BF%E6%96%B9%E7%8E%B0%E4%BB%A3%E6%80%9D%E6%83%B3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/a.pngf">
+      <meta itemprop="name" content="Shawn">
+      <meta itemprop="description" content="A NJUSCer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Shawn">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/10/08/%E8%A5%BF%E6%96%B9%E7%8E%B0%E4%BB%A3%E6%80%9D%E6%83%B3/" class="post-title-link" itemprop="url">西方现代思想</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-10-08 16:48:48" itemprop="dateCreated datePublished" datetime="2021-10-08T16:48:48-07:00">2021-10-08</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/08/Java%E4%B8%AD%E7%9A%84%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/a.pngf">
+      <meta itemprop="name" content="Shawn">
+      <meta itemprop="description" content="A NJUSCer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Shawn">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/10/08/Java%E4%B8%AD%E7%9A%84%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/" class="post-title-link" itemprop="url">Java中的类型转换</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-10-08 16:48:29" itemprop="dateCreated datePublished" datetime="2021-10-08T16:48:29-07:00">2021-10-08</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/08/Java%E4%B8%AD%E7%9A%84%E6%8E%92%E5%BA%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/a.pngf">
+      <meta itemprop="name" content="Shawn">
+      <meta itemprop="description" content="A NJUSCer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Shawn">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/10/08/Java%E4%B8%AD%E7%9A%84%E6%8E%92%E5%BA%8F/" class="post-title-link" itemprop="url">Java中的排序</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-10-08 16:48:15" itemprop="dateCreated datePublished" datetime="2021-10-08T16:48:15-07:00">2021-10-08</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/25/%E5%A6%82%E4%BD%95%E6%8F%90%E9%AB%98Java%E7%A8%8B%E5%BA%8F%E7%9A%84%E7%A8%B3%E5%AE%9A%E6%80%A7/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -385,105 +655,6 @@
 <li>不建议使用</li>
 </ul>
 <h2 id="12-Queue（接口）"><a href="#12-Queue（接口）" class="headerlink" title="12. Queue（接口）"></a>12. Queue（接口）</h2><h2 id="13-PriorityQueue"><a href="#13-PriorityQueue" class="headerlink" title="13. PriorityQueue"></a>13. PriorityQueue</h2>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/07/%E7%AE%80%E6%9E%90Java%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/a.pngf">
-      <meta itemprop="name" content="Shawn">
-      <meta itemprop="description" content="A NJUSCer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Shawn">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/07/%E7%AE%80%E6%9E%90Java%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/" class="post-title-link" itemprop="url">未命名</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-09-07 22:48:27 / 修改时间：22:58:49" itemprop="dateCreated datePublished" datetime="2021-09-07T22:48:27-07:00">2021-09-07</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Scanner in = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">in.nextInt(); <span class="comment">// 读取一行并获取整数</span></span><br><span class="line">in.nextDouble();</span><br><span class="line">in.next();</span><br><span class="line">in.nextLine(); <span class="comment">// 读取一行并获取字符串</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>Scanner 的官方文档: <a target="_blank" rel="noopener" href="https://docs.oracle.com/javase/8/docs/api/java/util/Scanner.html">https://docs.oracle.com/javase/8/docs/api/java/util/Scanner.html</a></li>
-</ul>
-<h1 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">System.out.println();</span><br><span class="line">System.out.print();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 格式化输出</span></span><br><span class="line"><span class="keyword">double</span> d = <span class="number">3.1415926</span>;</span><br><span class="line">System.out.printf(<span class="string">&quot;%.2f\n&quot;</span>, d); <span class="comment">// 显示两位小数3.14</span></span><br><span class="line">System.out.printf(<span class="string">&quot;%.4f\n&quot;</span>, d); <span class="comment">// 显示4位小数3.1416</span></span><br></pre></td></tr></table></figure>
-
-<table>
-<thead>
-<tr>
-<th align="left">占位符</th>
-<th align="left">说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">%d</td>
-<td align="left">格式化输出整数</td>
-</tr>
-<tr>
-<td align="left">%x</td>
-<td align="left">格式化输出十六进制整数</td>
-</tr>
-<tr>
-<td align="left">%f</td>
-<td align="left">格式化输出浮点数</td>
-</tr>
-<tr>
-<td align="left">%e</td>
-<td align="left">格式化输出科学计数法表示的浮点数</td>
-</tr>
-<tr>
-<td align="left">%s</td>
-<td align="left">格式化字符串</td>
-</tr>
-</tbody></table>
-<ul>
-<li><p>注意，由于%表示占位符，因此，连续两个%%表示一个%字符本身。</p>
-</li>
-<li><p>详细请参阅官方文档：<a target="_blank" rel="noopener" href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Formatter.html#syntax">https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Formatter.html#syntax</a></p>
-</li>
-</ul>
-
       
     </div>
 
@@ -862,102 +1033,11 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/08/17/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/a.pngf">
-      <meta itemprop="name" content="Shawn">
-      <meta itemprop="description" content="A NJUSCer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Shawn">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/08/17/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" class="post-title-link" itemprop="url">我的第一篇博客文章</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-08-17 21:56:21" itemprop="dateCreated datePublished" datetime="2021-08-17T21:56:21-07:00">2021-08-17</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-09-07 19:04:55" itemprop="dateModified" datetime="2021-09-07T19:04:55-07:00">2021-09-07</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="Hexo安装小白教程"><a href="#Hexo安装小白教程" class="headerlink" title="Hexo安装小白教程"></a>Hexo安装小白教程</h1><ul>
-<li>link：<br><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Yb411a7ty?from=search&amp;seid=10067804130876709922">https://www.bilibili.com/video/BV1Yb411a7ty?from=search&amp;seid=10067804130876709922</a></li>
-</ul>
-<p><strong>感谢CodeSheep!</strong></p>
-<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><blockquote>
-<p>node -v    查看node版本<br>npm -v 查看npm版本<br>npm install -g cnpm –registry=<a target="_blank" rel="noopener" href="http://registry.npm.taobao.org/">http://registry.npm.taobao.org</a> 安装淘宝的cnpm 管理器<br>cnpm -v    查看cnpm版本<br>cnpm install -g hexo-cli 安装hexo框架<br>hexo -v    查看hexo版本</p>
-</blockquote>
-<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><blockquote>
-<p>mkdir blog 创建blog目录<br>cd blog    进入blog目录<br>sudo hexo init 生成博客 初始化博客<br>hexo s 启动本地博客服务<br><a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a> 本地访问地址<br>hexo n 我的第一篇文章 创建新的文章<br>返回blog目录<br>hexo clean 清理<br>hexo g 生成<br>Github创建一个新的仓库 YourGithubName.github.io<br>cnpm install –save hexo-deployer-git 在blog目录下安装git部署插件</p>
-</blockquote>
-<h2 id="配置-config-yml"><a href="#配置-config-yml" class="headerlink" title="配置_config.yml"></a>配置_config.yml</h2><pre><code># Deployment
-## Docs: https://hexo.io/docs/deployment.html
-deploy:
-      type: git
-     repo: https://github.com/YourGithubName/YourGithubName.github.io.git
-      branch: master
-</code></pre>
-<blockquote>
-<p>hexo d    部署到Github仓库里</p>
-</blockquote>
-<blockquote>
-<p>git clone <a target="_blank" rel="noopener" href="https://github.com/litten/hexo-theme-yilia.git">https://github.com/litten/hexo-theme-yilia.git</a> themes/next</p>
-</blockquote>
-<h2 id="修改hexo根目录下的-config-yml-文件-：-theme-next"><a href="#修改hexo根目录下的-config-yml-文件-：-theme-next" class="headerlink" title="修改hexo根目录下的 _config.yml 文件 ： theme: next"></a>修改hexo根目录下的 _config.yml 文件 ： theme: next</h2><p>hexo c    清理缓存<br>hexo g    生成<br>hexo d    部署到远程Github仓库</p>
-<h2 id="关于图片如何插入"><a href="#关于图片如何插入" class="headerlink" title="关于图片如何插入"></a>关于图片如何插入</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://www.dazhuanlan.com/liumeifly/topics/950653">https://www.dazhuanlan.com/liumeifly/topics/950653</a></li>
-</ul>
-<h2 id="插件总结"><a href="#插件总结" class="headerlink" title="插件总结"></a>插件总结</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://anclark.github.io/2019/03/28/Hexo/%E6%8E%A8%E8%8D%90%E6%8F%92%E4%BB%B6%E6%95%B4%E7%90%86/">https://anclark.github.io/2019/03/28/Hexo/%E6%8E%A8%E8%8D%90%E6%8F%92%E4%BB%B6%E6%95%B4%E7%90%86/</a></li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
 
 
 
@@ -1024,7 +1104,7 @@ deploy:
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">11</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
