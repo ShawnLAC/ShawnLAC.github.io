@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="Twitter OA 题库1. LC 5322. LC 739 Daily Temperatures  12345678910111213141516171819class Solution &amp;#123;    public int[] dailyTemperatures(int[] temperatures) &amp;#123;                &#x2F;&#x2F; Time: O(n)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Shawn">
+<meta property="og:url" content="http://example.com/2021/10/10/TwitterOA/index.html">
+<meta property="og:site_name" content="Shawn">
+<meta property="og:description" content="Twitter OA 题库1. LC 5322. LC 739 Daily Temperatures  12345678910111213141516171819class Solution &amp;#123;    public int[] dailyTemperatures(int[] temperatures) &amp;#123;                &#x2F;&#x2F; Time: O(n)">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-10-10T18:36:56.565Z">
+<meta property="article:modified_time" content="2021-10-11T20:03:14.016Z">
+<meta property="article:author" content="Shawn">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2021/10/10/TwitterOA/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title> | Shawn</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Shawn</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">code&music&travel&...</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-schedule">
+
+    <a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/10/TwitterOA/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/a.pngf">
+      <meta itemprop="name" content="Shawn">
+      <meta itemprop="description" content="A NJUSCer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Shawn">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-10-10 11:36:56" itemprop="dateCreated datePublished" datetime="2021-10-10T11:36:56-07:00">2021-10-10</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-10-11 13:03:14" itemprop="dateModified" datetime="2021-10-11T13:03:14-07:00">2021-10-11</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="Twitter-OA-题库"><a href="#Twitter-OA-题库" class="headerlink" title="Twitter OA 题库"></a>Twitter OA 题库</h2><h3 id="1-LC-532"><a href="#1-LC-532" class="headerlink" title="1. LC 532"></a>1. LC 532</h3><h3 id="2-LC-739"><a href="#2-LC-739" class="headerlink" title="2. LC 739"></a>2. LC 739</h3><ul>
+<li>Daily Temperatures</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] dailyTemperatures(<span class="keyword">int</span>[] temperatures) &#123;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// Time: O(n)</span></span><br><span class="line">        <span class="comment">// Space: O(n)</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">int</span> len = temperatures.length;</span><br><span class="line">        <span class="keyword">int</span>[] ans = <span class="keyword">new</span> <span class="keyword">int</span>[len];</span><br><span class="line">        Deque&lt;Integer&gt; stack = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">            <span class="keyword">while</span> (!stack.isEmpty() &amp;&amp; temperatures[stack.peek()] &lt; temperatures[i]) &#123;</span><br><span class="line">                <span class="keyword">int</span> tmp = stack.pop();</span><br><span class="line">                ans[tmp] = i - tmp;</span><br><span class="line">            &#125;</span><br><span class="line">            stack.push(i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-LC-780"><a href="#3-LC-780" class="headerlink" title="3. LC 780"></a>3. LC 780</h3><ul>
+<li>Reaching Points</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">reachingPoints</span><span class="params">(<span class="keyword">int</span> sx, <span class="keyword">int</span> sy, <span class="keyword">int</span> tx, <span class="keyword">int</span> ty)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">while</span> (tx &gt;= sx &amp;&amp; ty &gt;= sy) &#123;</span><br><span class="line">            <span class="keyword">if</span> (tx &gt; ty) &#123;</span><br><span class="line">                <span class="keyword">if</span> (ty &gt; sy) &#123;</span><br><span class="line">                    tx %= ty;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    <span class="keyword">return</span> (tx - sx) % ty == <span class="number">0</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">if</span> (tx &gt; sx) &#123;</span><br><span class="line">                    ty %= tx;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    <span class="keyword">return</span> (ty - sy) % tx == <span class="number">0</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> (tx == sx) &amp;&amp; (ty == sy);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-LC-547"><a href="#4-LC-547" class="headerlink" title="4. LC 547"></a>4. LC 547</h3><ul>
+<li>Number of Provinces</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findCircleNum</span><span class="params">(<span class="keyword">int</span>[][] isConnected)</span> </span>&#123;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">int</span> len = isConnected.length;</span><br><span class="line">        <span class="keyword">boolean</span>[] visited = <span class="keyword">new</span> <span class="keyword">boolean</span>[len];</span><br><span class="line">        <span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (visited[i]) &#123;</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            ans += dfs(isConnected, visited, i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">int</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span>[][] isConnected, <span class="keyword">boolean</span>[] visited, <span class="keyword">int</span> i)</span> </span>&#123;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; isConnected.length; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (isConnected[i][j] == <span class="number">0</span> || i == j || visited[j] == <span class="keyword">true</span>) &#123;</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            visited[j] = <span class="keyword">true</span>;</span><br><span class="line">            dfs(isConnected, visited, j);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-LC-256"><a href="#5-LC-256" class="headerlink" title="5. LC 256"></a>5. LC 256</h3><ul>
+<li>Paint House</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">minCost</span><span class="params">(<span class="keyword">int</span>[][] costs)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] pre = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">3</span>];</span><br><span class="line">        <span class="keyword">int</span>[] cur = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">3</span>];</span><br><span class="line">        pre[<span class="number">0</span>] = costs[costs.length - <span class="number">1</span>][<span class="number">0</span>];</span><br><span class="line">        pre[<span class="number">1</span>] = costs[costs.length - <span class="number">1</span>][<span class="number">1</span>];</span><br><span class="line">        pre[<span class="number">2</span>] = costs[costs.length - <span class="number">1</span>][<span class="number">2</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = costs.length - <span class="number">2</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">            cur[<span class="number">0</span>] = costs[i][<span class="number">0</span>] + Math.min(pre[<span class="number">1</span>], pre[<span class="number">2</span>]);</span><br><span class="line">            cur[<span class="number">1</span>] = costs[i][<span class="number">1</span>] + Math.min(pre[<span class="number">0</span>], pre[<span class="number">2</span>]);</span><br><span class="line">            cur[<span class="number">2</span>] = costs[i][<span class="number">2</span>] + Math.min(pre[<span class="number">0</span>], pre[<span class="number">1</span>]);</span><br><span class="line">            pre[<span class="number">0</span>] = cur[<span class="number">0</span>];</span><br><span class="line">            pre[<span class="number">1</span>] = cur[<span class="number">1</span>];</span><br><span class="line">            pre[<span class="number">2</span>] = cur[<span class="number">2</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> Math.min(Math.min(pre[<span class="number">0</span>], pre[<span class="number">1</span>]), pre[<span class="number">2</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-LC-70"><a href="#6-LC-70" class="headerlink" title="6. LC 70"></a>6. LC 70</h3><ul>
+<li>Climbing Stairs</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">climbStairs</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] dp = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">3</span>];</span><br><span class="line">        dp[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">        dp[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt; n + <span class="number">1</span>; i++) &#123;</span><br><span class="line">            dp[i % <span class="number">3</span>] = dp[(i - <span class="number">1</span>) % <span class="number">3</span>] + dp[(i - <span class="number">2</span>) % <span class="number">3</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> dp[n % <span class="number">3</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="7-LC-647"><a href="#7-LC-647" class="headerlink" title="7. LC 647"></a>7. LC 647</h3><ul>
+<li>Number of Substrings</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> num = <span class="number">0</span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">countSubstrings</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; s.length(); i++) &#123;</span><br><span class="line">            count(s, i, i);</span><br><span class="line">            count(s, i, i + <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> num;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">count</span><span class="params">(String s, <span class="keyword">int</span> start, <span class="keyword">int</span> end)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">while</span> (start &gt;= <span class="number">0</span> &amp;&amp; end &lt; s.length() &amp;&amp; s.charAt(start) == s.charAt(end)) &#123;</span><br><span class="line">            num++;</span><br><span class="line">            start--;</span><br><span class="line">            end++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="8-Game-Event"><a href="#8-Game-Event" class="headerlink" title="8. Game Event"></a>8. Game Event</h3><h3 id="9-Weird-Faculty"><a href="#9-Weird-Faculty" class="headerlink" title="9. Weird Faculty"></a>9. Weird Faculty</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">exam</span><span class="params">(List&lt;Integer&gt; v)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">int</span> totalSum = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> score : v) &#123;</span><br><span class="line">    <span class="keyword">if</span> (score == <span class="number">0</span>) &#123;</span><br><span class="line">      totalSum -= <span class="number">1</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      totalSum += <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">int</span> currSum = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; v.size(); i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (currSum &gt; totalSum) &#123;</span><br><span class="line">      <span class="keyword">return</span> i;</span><br><span class="line">    &#125;</span><br><span class="line">    currSum += v.get(i) == <span class="number">0</span> ? -<span class="number">1</span> : <span class="number">1</span>;</span><br><span class="line">    totalSum -= v.get(i) == <span class="number">0</span> ? -<span class="number">1</span> : <span class="number">1</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> v.size();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="10-University-Career-Fair"><a href="#10-University-Career-Fair" class="headerlink" title="10. University Career Fair"></a>10. University Career Fair</h3><h3 id="11-Anagram-Difference"><a href="#11-Anagram-Difference" class="headerlink" title="11. Anagram Difference"></a>11. Anagram Difference</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">anagram</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">int</span> len = s.length();</span><br><span class="line">  <span class="keyword">if</span> (len % <span class="number">2</span> == <span class="number">1</span>) &#123;</span><br><span class="line">  	<span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  HashMap&lt;Character, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len / <span class="number">2</span>; i++) &#123;</span><br><span class="line">    map.put(s.charAt(i), map.getOrDefault(s.charAt(i), <span class="number">0</span>) + <span class="number">1</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">int</span> ans = len / <span class="number">2</span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = len / <span class="number">2</span>; i &lt; len; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (map.containsKey(s.charAt(i)) &amp;&amp; map.get(s.charAt(i)) != <span class="number">0</span>) &#123;</span><br><span class="line">      ans--;</span><br><span class="line">      map.put(s.charAt(i), map.get(s.charAt(i)) - <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="12-Partitioning-Array"><a href="#12-Partitioning-Array" class="headerlink" title="12. Partitioning Array"></a>12. Partitioning Array</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">partitionArrayUnique</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">int</span> len = nums.length;</span><br><span class="line">  <span class="keyword">if</span> (len % k != <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  HashMap&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">    map.put(nums[i], map.getOrDefault(nums[i], <span class="number">0</span>) + <span class="number">1</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">for</span> (Integer i : map.values()) &#123;</span><br><span class="line">    <span class="keyword">if</span> (i &gt; k) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="13-Twitter-new-office-design"><a href="#13-Twitter-new-office-design" class="headerlink" title="13. Twitter new office design"></a>13. Twitter new office design</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">tallestHashTag</span><span class="params">(<span class="keyword">int</span>[] positions, <span class="keyword">int</span>[] heights)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">int</span> max = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">int</span> len = positions.length;</span><br><span class="line">  Integer[] indices = <span class="keyword">new</span> Integer[len];</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">    indices[i] = i;</span><br><span class="line">  &#125;</span><br><span class="line">  Arrays.sort(indices, <span class="keyword">new</span> Comparator&lt;Integer&gt;() &#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(Integer a, Integer b)</span> </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> positions[a] - positions[b];</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; positions.length - <span class="number">1</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (Math.abs(positions[indices[i]] - positions[indices[i + <span class="number">1</span>]]) &lt; <span class="number">2</span>) &#123;</span><br><span class="line">      <span class="keyword">continue</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    max = Math.max(max, curMax(positions[indices[i]], positions[indices[i + <span class="number">1</span>]], heights[indices[i]], heights[indices[i + <span class="number">1</span>]]));</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> max;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">curMax</span><span class="params">(<span class="keyword">int</span> p1, <span class="keyword">int</span> p2, <span class="keyword">int</span> h1, <span class="keyword">int</span> h2)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">int</span> shorter = Math.min(h1, h2);</span><br><span class="line">  <span class="keyword">int</span> taller = Math.max(h1, h2);</span><br><span class="line">  <span class="keyword">int</span> gap = p2 - p1;</span><br><span class="line">  <span class="keyword">if</span> (gap + shorter &lt;= taller + <span class="number">1</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> gap + shorter - <span class="number">1</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> (gap + taller + shorter) / <span class="number">2</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="14-Efficient-Job-Processing"><a href="#14-Efficient-Job-Processing" class="headerlink" title="14. Efficient Job Processing"></a>14. Efficient Job Processing</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">int</span>[] weights = <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">2</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">5</span>&#125;;</span><br><span class="line">  <span class="keyword">int</span>[] tasks = <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">2</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>&#125;;</span><br><span class="line">  System.out.println(maximumTotalWeight(weights, tasks, <span class="number">15</span>));      <span class="comment">// 10</span></span><br><span class="line"></span><br><span class="line">  weights = <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">2</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">5</span>&#125;;</span><br><span class="line">  tasks = <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">2</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>&#125;;</span><br><span class="line">  System.out.println(maximumTotalWeight(weights, tasks, <span class="number">15</span>));      <span class="comment">// 9</span></span><br><span class="line"></span><br><span class="line">  weights = <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">2</span>&#125;;</span><br><span class="line">  tasks = <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">2</span>&#125;;</span><br><span class="line">  System.out.println(maximumTotalWeight(weights, tasks, <span class="number">1</span>));      <span class="comment">// 0</span></span><br><span class="line"></span><br><span class="line">  weights = <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">2</span>&#125;;</span><br><span class="line">  tasks = <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">2</span>&#125;;</span><br><span class="line">  System.out.println(maximumTotalWeight(weights, tasks, <span class="number">10</span>));      <span class="comment">// 2</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">maximumTotalWeight</span><span class="params">(<span class="keyword">int</span>[] weights, <span class="keyword">int</span>[] tasks, <span class="keyword">int</span> p)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">int</span>[][] dp = <span class="keyword">new</span> <span class="keyword">int</span>[weights.length + <span class="number">1</span>][p / <span class="number">2</span> + <span class="number">1</span>];</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; dp.length; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; dp[<span class="number">0</span>].length; j++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (j &lt; tasks[i - <span class="number">1</span>]) &#123;</span><br><span class="line">        dp[i][j] = dp[i - <span class="number">1</span>][j];</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        dp[i][j] = Math.max(dp[i - <span class="number">1</span>][j], dp[i - <span class="number">1</span>][j - tasks[i - <span class="number">1</span>]] + weights[i - <span class="number">1</span>]);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> dp[weights.length][p / <span class="number">2</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="15-Unique-Twitter-User-Id-Set"><a href="#15-Unique-Twitter-User-Id-Set" class="headerlink" title="15. Unique Twitter User Id Set"></a>15. Unique Twitter User Id Set</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">  System.out.println(minSum(<span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">7</span>&#125;));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">minSum</span><span class="params">(<span class="keyword">int</span>[] arr)</span> </span>&#123;</span><br><span class="line">  Arrays.sort(arr);</span><br><span class="line">  <span class="keyword">int</span> ans = arr[<span class="number">0</span>];</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (arr[i] &lt;= arr[i - <span class="number">1</span>]) &#123;</span><br><span class="line">      arr[i] = arr[i - <span class="number">1</span>] + <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    ans += arr[i];</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="16-Parking-Pilemma"><a href="#16-Parking-Pilemma" class="headerlink" title="16. Parking Pilemma"></a>16. Parking Pilemma</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">  System.out.println(carParkingRoof(<span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">2</span>, <span class="number">8</span>, <span class="number">10</span>, <span class="number">17</span>&#125;, <span class="number">3</span>));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">carParkingRoof</span><span class="params">(<span class="keyword">int</span>[] cars, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">  Arrays.sort(cars);</span><br><span class="line">  <span class="keyword">int</span> n = cars.length;</span><br><span class="line">  <span class="keyword">int</span> ans = cars[n - <span class="number">1</span>] - cars[<span class="number">0</span>] + <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>, j = i + k - <span class="number">1</span>; j &lt; n; i++, j++) &#123;</span><br><span class="line">    ans = Math.min(ans, cars[j] - cars[i] + <span class="number">1</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="17-LC-435"><a href="#17-LC-435" class="headerlink" title="17. LC 435"></a>17. LC 435</h3><ul>
+<li>Non-overlapping Intervals</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">eraseOverlapIntervals</span><span class="params">(<span class="keyword">int</span>[][] intervals)</span> </span>&#123;</span><br><span class="line">        Arrays.sort(intervals, <span class="keyword">new</span> Comparator&lt;&gt;() &#123;</span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(<span class="keyword">int</span>[] a, <span class="keyword">int</span>[] b)</span> </span>&#123;</span><br><span class="line">                <span class="keyword">if</span> (a[<span class="number">0</span>] == b[<span class="number">0</span>]) &#123;</span><br><span class="line">                    <span class="keyword">return</span> a[<span class="number">1</span>] - b[<span class="number">1</span>];</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">return</span> a[<span class="number">0</span>] - b[<span class="number">0</span>];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="keyword">int</span> ans = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> j = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (j &lt; intervals.length) &#123;</span><br><span class="line">            <span class="keyword">if</span> (intervals[i][<span class="number">1</span>] &gt; intervals[j][<span class="number">0</span>]) &#123;</span><br><span class="line">                <span class="keyword">if</span> (intervals[i][<span class="number">1</span>] &gt; intervals[j][<span class="number">1</span>]) &#123;</span><br><span class="line">                    i = j;</span><br><span class="line">                    j++;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    j++;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                i = j;</span><br><span class="line">                ans++;</span><br><span class="line">                j++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> intervals.length - ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="18-LC"><a href="#18-LC" class="headerlink" title="18. LC"></a>18. LC</h3>
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/10/08/%E7%AE%80%E6%9E%90Java%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/" rel="prev" title="简析Java输入输出">
+      <i class="fa fa-chevron-left"></i> 简析Java输入输出
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Twitter-OA-%E9%A2%98%E5%BA%93"><span class="nav-number">1.</span> <span class="nav-text">Twitter OA 题库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-LC-532"><span class="nav-number">1.1.</span> <span class="nav-text">1. LC 532</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-LC-739"><span class="nav-number">1.2.</span> <span class="nav-text">2. LC 739</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-LC-780"><span class="nav-number">1.3.</span> <span class="nav-text">3. LC 780</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-LC-547"><span class="nav-number">1.4.</span> <span class="nav-text">4. LC 547</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-LC-256"><span class="nav-number">1.5.</span> <span class="nav-text">5. LC 256</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-LC-70"><span class="nav-number">1.6.</span> <span class="nav-text">6. LC 70</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-LC-647"><span class="nav-number">1.7.</span> <span class="nav-text">7. LC 647</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-Game-Event"><span class="nav-number">1.8.</span> <span class="nav-text">8. Game Event</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-Weird-Faculty"><span class="nav-number">1.9.</span> <span class="nav-text">9. Weird Faculty</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-University-Career-Fair"><span class="nav-number">1.10.</span> <span class="nav-text">10. University Career Fair</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-Anagram-Difference"><span class="nav-number">1.11.</span> <span class="nav-text">11. Anagram Difference</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-Partitioning-Array"><span class="nav-number">1.12.</span> <span class="nav-text">12. Partitioning Array</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-Twitter-new-office-design"><span class="nav-number">1.13.</span> <span class="nav-text">13. Twitter new office design</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#14-Efficient-Job-Processing"><span class="nav-number">1.14.</span> <span class="nav-text">14. Efficient Job Processing</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#15-Unique-Twitter-User-Id-Set"><span class="nav-number">1.15.</span> <span class="nav-text">15. Unique Twitter User Id Set</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#16-Parking-Pilemma"><span class="nav-number">1.16.</span> <span class="nav-text">16. Parking Pilemma</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#17-LC-435"><span class="nav-number">1.17.</span> <span class="nav-text">17. LC 435</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#18-LC"><span class="nav-number">1.18.</span> <span class="nav-text">18. LC</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Shawn"
+      src="/images/a.pngf">
+  <p class="site-author-name" itemprop="name">Shawn</p>
+  <div class="site-description" itemprop="description">A NJUSCer</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Shawn</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
